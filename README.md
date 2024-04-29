@@ -2,6 +2,8 @@
 
 https://www.youtube.com/watch?v=kCc8FmEb1nY&t=450s
 
+[repo](https://github.com/karpathy/ng-video-lecture)
+
 - Papaers
     - [Attention is All You Need paper](https://arxiv.org/abs/1706.03762) , [PDF](papers/1706.03762v7.pdf)
         - If you read this paper, it likes a pretty random machine translation paper, and that's because the author didn't fully anticipate the impact that the Transformer would have on the field.
