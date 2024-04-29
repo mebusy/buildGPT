@@ -22,3 +22,10 @@ We're going to basically model how these characters follow each other. Once we'v
 
 
 I've already written this entire code to train these Transformers, it's called [nano GPT](https://github.com/karpathy/nanoGPT). It's a repository for training Transformers on any given text. There's many ways to train Transformers. This is a very simple implementation. Just 2 files of 300 lines of code. I've only so far reproduced the smallest 124M parameter GPT-2 model, but basically this is just proving that the code base is correctly arranged and I'm able to load the neural network weights that openAI has released later.
+
+
+## Training a Transformer
+
+Now the important to realize is we're never going to actually feed the entire text into Transformer all at one, that would be computationally very expensive. Instead, we're going to feed it in chunks of text.
+
+When we train the Transformers we basically sample random little chunks out of the training set, and train them just chunks at a time and these chunks have basically some kind of a max-length called, e.g.,  `block_size`.
