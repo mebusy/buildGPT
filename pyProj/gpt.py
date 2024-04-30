@@ -158,6 +158,8 @@ class GPTLanguageModel(nn.Module):
         #   the embending for the logits, but instead we go through a intermediate phase because
         #   we're going to start making that bigger.
         self.token_embedding_table = nn.Embedding(vocab_size, n_embd)
+        # we're not just encoding the identity of these tokens, but also their position
+        # for each position from 0 to block_size-1,  will also get its own embedding vector
         self.position_embedding_table = nn.Embedding(block_size, n_embd)
         self.blocks = nn.Sequential(
             *[Block(n_embd, n_head=n_head) for _ in range(n_layer)])
