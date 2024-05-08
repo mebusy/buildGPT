@@ -31,3 +31,12 @@ I've already written this entire code to train these Transformers, it's called [
 Now the important to realize is we're never going to actually feed the entire text into Transformer all at one, that would be computationally very expensive. Instead, we're going to feed it in chunks of text.
 
 When we train the Transformers we basically sample random little chunks out of the training set, and train them just chunks at a time and these chunks have basically some kind of a max-length called, e.g.,  `block_size`.
+
+
+
+
+# References
+
+- [nano GPT](https://github.com/karpathy/nanoGPT)
+
+
